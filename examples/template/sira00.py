@@ -3,6 +3,7 @@
 
 from twitterbot import TwitterBot
 
+
 class MyTwitterBot(TwitterBot):
     def bot_init(self):
         """
@@ -16,17 +17,19 @@ class MyTwitterBot(TwitterBot):
         # REQUIRED: LOGIN DETAILS! #
         ############################
         self.config['api_key'] = '1e7oL4nE1tpNSF3rikrfdSFbN'
-        self.config['api_secret'] = 'qtlSXVeHSNpSuw5WnqEHfVWe8C3XsQDBBLH4ToixuWNhHamED8'
-        self.config['access_key'] = '1070084671562805248-W9Bf7bbbtd4lErusUEVfLNrESyAFUV'
-        self.config['access_secret'] = 'gTmjK4nJY7u58VadBeKfvpilbVM292wuCxnjB8wOIdDMK'
-
+        self.config[
+            'api_secret'] = 'qtlSXVeHSNpSuw5WnqEHfVWe8C3XsQDBBLH4ToixuWNhHamED8'
+        self.config[
+            'access_key'] = '1070084671562805248-W9Bf7bbbtd4lErusUEVfLNrESyAFUV'
+        self.config[
+            'access_secret'] = 'gTmjK4nJY7u58VadBeKfvpilbVM292wuCxnjB8wOIdDMK'
 
         ######################################
         # SEMI-OPTIONAL: OTHER CONFIG STUFF! #
         ######################################
 
         # how often to tweet, in seconds
-        self.config['tweet_interval'] = 30 * 60     # default: 30 minutes
+        self.config['tweet_interval'] = 30 * 60  # default: 30 minutes
 
         # use this to define a (min, max) random range of how often to tweet
         # e.g., self.config['tweet_interval_range'] = (5*60, 10*60) # tweets every 5-10 minutes
@@ -46,7 +49,6 @@ class MyTwitterBot(TwitterBot):
 
         # follow back all followers?
         self.config['autofollow'] = False
-
 
         ###########################################
         # CUSTOM: your bot's own state variables! #
@@ -68,7 +70,6 @@ class MyTwitterBot(TwitterBot):
 
         # self.register_custom_handler(self.my_function, 60 * 60 * 24)
 
-
     def on_scheduled_tweet(self):
         """
         Make a public tweet to the bot's own timeline.
@@ -79,11 +80,12 @@ class MyTwitterBot(TwitterBot):
         """
         # text = function_that_returns_a_string_goes_here()
         # self.post_tweet(text)
-        self.post_tweet(text)  # post some tweet
-        self.post_tweet(text, reply_to=tweet)    # respond to a tweet
+          self.post_tweet(text)  # post some tweet
+          self.post_tweet(text, reply_to=tweet)  # respond to a tweet
 
-        raise NotImplementedError("You need to implement this to tweet to timeline (or pass if you don't want to)!")
-
+        raise NotImplementedError(
+            "You need to implement this to tweet to timeline (or pass if you don't want to)!"
+        )
 
     def on_mention(self, tweet, prefix):
         """
@@ -109,10 +111,11 @@ class MyTwitterBot(TwitterBot):
         # call this to fav the tweet!
         # if something:
         #     self.favorite_tweet(tweet)
-        self.favorite(tweet)                     # favorite a tweet
+              self.favorite(tweet)           # favorite a tweet
 
-        raise NotImplementedError("You need to implement this to reply to/fav mentions (or pass if you don't want to)!")
-
+        raise NotImplementedError(
+            "You need to implement this to reply to/fav mentions (or pass if you don't want to)!"
+        )
 
     def on_timeline(self, tweet, prefix):
         """
@@ -138,9 +141,12 @@ class MyTwitterBot(TwitterBot):
         # call this to fav the tweet!
         # if something:
         #     self.favorite_tweet(tweet)
-        self.log(message)                        # write something to the log file
+              self.favorite(tweet)            # favorite a tweet
+              self.log(message)  # write something to the log file
 
-        raise NotImplementedError("You need to implement this to reply to/fav timeline tweets (or pass if you don't want to)!")
+        raise NotImplementedError(
+            "You need to implement this to reply to/fav timeline tweets (or pass if you don't want to)!"
+        )
 
 
 if __name__ == '__main__':
