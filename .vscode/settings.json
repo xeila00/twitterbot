@@ -1,5 +1,6 @@
 {
     "less.lint.importStatement": "ignore",
-    "python.linting.enabled": false,
-    "python.linting.lintOnSave": false
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": false,
+    "python.formatting.provider": "yapf"
 }

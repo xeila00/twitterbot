@@ -51,7 +51,7 @@ class MyTwitterBot(TwitterBot):
         ###########################################
         # CUSTOM: your bot's own state variables! #
         ###########################################
-        
+
         # If you'd like to save variables with the bot's state, use the
         # self.state dictionary. These will only be initialized if the bot is
         # not loading a previous saved state.
@@ -65,7 +65,7 @@ class MyTwitterBot(TwitterBot):
         # minutes, but you'd also like to post something different every 24
         # hours, you would implement self.my_function and add the following
         # line here:
-        
+
         # self.register_custom_handler(self.my_function, 60 * 60 * 24)
 
 
@@ -79,11 +79,11 @@ class MyTwitterBot(TwitterBot):
         """
         # text = function_that_returns_a_string_goes_here()
         # self.post_tweet(text)
-        self.post_tweet(text)                    # post some tweet
+        self.post_tweet(text)  # post some tweet
         self.post_tweet(text, reply_to=tweet)    # respond to a tweet
 
         raise NotImplementedError("You need to implement this to tweet to timeline (or pass if you don't want to)!")
-        
+
 
     def on_mention(self, tweet, prefix):
         """
