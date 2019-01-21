@@ -1,0 +1,4 @@
+{
+    "less.lint.importStatement": "ignore",
+    "python.linting.enabled": true
+}

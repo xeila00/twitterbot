@@ -79,6 +79,8 @@ class MyTwitterBot(TwitterBot):
         """
         # text = function_that_returns_a_string_goes_here()
         # self.post_tweet(text)
+        self.post_tweet(text)                    # post some tweet
+        self.post_tweet(text, reply_to=tweet)    # respond to a tweet
 
         raise NotImplementedError("You need to implement this to tweet to timeline (or pass if you don't want to)!")
         
@@ -107,6 +109,7 @@ class MyTwitterBot(TwitterBot):
         # call this to fav the tweet!
         # if something:
         #     self.favorite_tweet(tweet)
+        self.favorite(tweet)                     # favorite a tweet
 
         raise NotImplementedError("You need to implement this to reply to/fav mentions (or pass if you don't want to)!")
 
@@ -135,6 +138,7 @@ class MyTwitterBot(TwitterBot):
         # call this to fav the tweet!
         # if something:
         #     self.favorite_tweet(tweet)
+        self.log(message)                        # write something to the log file
 
         raise NotImplementedError("You need to implement this to reply to/fav timeline tweets (or pass if you don't want to)!")
 
