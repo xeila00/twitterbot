@@ -80,13 +80,9 @@ class MyTwitterBot(TwitterBot):
         """
         # text = function_that_returns_a_string_goes_here()
         # self.post_tweet(text)
-        
-          self.post_tweet(text)  # post some tweet
-         
-         raise NotImplementedError(
-            "You need to implement this to tweet to timeline (or pass if you don't want to)!"
-        )
 
+                   
+         
     def on_mention(self, tweet, prefix):
         """
         Defines actions to take when a mention is received.
@@ -107,15 +103,11 @@ class MyTwitterBot(TwitterBot):
         # text = function_that_returns_a_string_goes_here()
         # prefixed_text = prefix + ' ' + text
         # self.post_tweet(prefix + ' ' + text, reply_to=tweet)
-          self.post_tweet(text, reply_to=tweet)  # respond to a tweet
         # call this to fav the tweet!
         # if something:
         #     self.favorite_tweet(tweet)
-              self.favorite(tweet)           # favorite a tweet
 
-        raise NotImplementedError(
-            "You need to implement this to reply to/fav mentions (or pass if you don't want to)!"
-        )
+        
 
     def on_timeline(self, tweet, prefix):
         """
@@ -141,13 +133,8 @@ class MyTwitterBot(TwitterBot):
         # call this to fav the tweet!
         # if something:
         #     self.favorite_tweet(tweet)
-              self.favorite(tweet)            # favorite a tweet
-              self.log(message)  # write something to the log file
 
-        raise NotImplementedError(
-            "You need to implement this to reply to/fav timeline tweets (or pass if you don't want to)!"
-        )
-
+        
 
 if __name__ == '__main__':
     bot = MyTwitterBot()
