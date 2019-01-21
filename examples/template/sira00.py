@@ -80,10 +80,10 @@ class MyTwitterBot(TwitterBot):
         """
         # text = function_that_returns_a_string_goes_here()
         # self.post_tweet(text)
+        
           self.post_tweet(text)  # post some tweet
-          self.post_tweet(text, reply_to=tweet)  # respond to a tweet
-
-        raise NotImplementedError(
+         
+         raise NotImplementedError(
             "You need to implement this to tweet to timeline (or pass if you don't want to)!"
         )
 
@@ -107,7 +107,7 @@ class MyTwitterBot(TwitterBot):
         # text = function_that_returns_a_string_goes_here()
         # prefixed_text = prefix + ' ' + text
         # self.post_tweet(prefix + ' ' + text, reply_to=tweet)
-
+          self.post_tweet(text, reply_to=tweet)  # respond to a tweet
         # call this to fav the tweet!
         # if something:
         #     self.favorite_tweet(tweet)
