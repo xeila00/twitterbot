@@ -42,13 +42,13 @@ class MyTwitterBot(TwitterBot):
         self.config['reply_followers_only'] = True
 
         # fav any tweets that mention this bot?
-        self.config['autofav_mentions'] = False
+        self.config['autofav_mentions'] = True
 
         # fav any tweets containing these keywords?
         self.config['autofav_keywords'] = []
 
         # follow back all followers?
-        self.config['autofollow'] = False
+        self.config['autofollow'] = True
 
         ###########################################
         # CUSTOM: your bot's own state variables! #
@@ -80,10 +80,8 @@ class MyTwitterBot(TwitterBot):
         """
         # text = function_that_returns_a_string_goes_here()
         # self.post_tweet(text)
-         
-         
-         
-                   
+        self.post_tweet(text)
+        
          
     def on_mention(self, tweet, prefix):
         """
@@ -108,6 +106,7 @@ class MyTwitterBot(TwitterBot):
         # call this to fav the tweet!
         # if something:
         #     self.favorite_tweet(tweet)
+              self.favorite_tweet(tweet)
 
         
 
@@ -131,13 +130,15 @@ class MyTwitterBot(TwitterBot):
         # text = function_that_returns_a_string_goes_here()
         # prefixed_text = prefix + ' ' + text
         # self.post_tweet(prefix + ' ' + text, reply_to=tweet)
-
+          prefixed_text = prefix + ' ' + text
+          self.post_tweet(prefix + ' ' + text, reply_to=tweet)
         # call this to fav the tweet!
         # if something:
         #     self.favorite_tweet(tweet)
+               self.favorite_tweet(tweet)
 
         
 
 if __name__ == '__main__':
-    bot = MyTwitterBot()
+    bot = sira00()
     bot.run()
